@@ -19,8 +19,10 @@ function generateQuote(){
     document.getElementById("author").innerHTML = quotes[arrayIndex].author;
 }
 
+// Ensure script runs after DOM is fully loaded
 window.onload = function () {
     generateQuote();
-} 
 
-document.getElementById("generate").addEventListener('click', generateQuote);
+    // Add event listener after DOM is fully loaded
+    document.getElementById("generate").addEventListener("click", generateQuote);
+};
